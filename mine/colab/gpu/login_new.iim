@@ -8,8 +8,9 @@ CLEAR
  
 FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu\update.iim
 
+ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=update.iim
 URL GOTO=https://wildannss.github.io/mine/colab/gpu/update.iim
-SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=update.iim
+'SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=update.iim
 
 CLEAR
 
