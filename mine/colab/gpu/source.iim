@@ -7,7 +7,7 @@ TAB T=1
 URL GOTO=about:newtab
 CLEAR
 
-'FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Datasources\users.csv
+FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Datasources\users.csv
 
 ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Datasources FILE=users.csv
 URL GOTO=https://wildannss.github.io/mine/{{!COL4}}/users.csv
