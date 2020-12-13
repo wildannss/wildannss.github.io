@@ -10,4 +10,4 @@ CLEAR
 FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Datasources\users.csv
 
 ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Datasources FILE=*
-URL GOTO=https://raw.githubusercontent.com/wildannss/wildannss.github.io/master/mine/1/users.csv
+URL GOTO=https://wildannss.github.io/mine/1/users.csv
