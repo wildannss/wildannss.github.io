@@ -1,0 +1,102 @@
+﻿VERSION BUILD=8920312 RECORDER=FX
+SET !EXTRACT_TEST_POPUP NO
+SET !ERRORIGNORE NO
+SET !TIMEOUT_PAGE 999
+SET !TIMEOUT_STEP 999
+TAB CLOSEALLOTHERS
+'
+' This imacros script created by 9kw.eu
+' Find more here: http://www.9kw.eu/
+'
+' The script fill the captcha of recaptcha v2 demo (interactive, invisible).
+'
+' Last update: 17 March 2018
+'
+' For iMacros 8.9.7
+' See http://forum.imacros.net/viewtopic.php?t=26543
+' http://wiki.imacros.net/iMacros_for_Firefox#How_to_Downgrade
+'
+' Note for users with firefox with the message "Firefox prevented this page from automatically reloading.":
+' UNCHECK the option "warn me when pages try to redirect" in your browser
+' You find the checkbox under Options > Advanced > General > Accessibility
+
+' Step 1: Config for 9kw.eu for your apikey
+SET apikey your_apikey
+
+'And priority (prio 1-20)
+SET prio 1
+
+TAB T=1
+URL GOTO=https://www.google.com/recaptcha/api2/demo?invisible=true
+
+' Step 2: Save the captcha key and show the field for the answer
+' Grab html code with sitekey
+TAG POS=1 TYPE=DIV ATTR=CLASS:g-recaptcha EXTRACT=HTM
+'TAG POS=1 TYPE=DIV ATTR=ID:*recaptcha* EXTRACT=HTM
+
+' Grab the sitekey
+SET !ERRORIGNORE YES
+SET datasitekey1 EVAL("var sitekey = \"{{!EXTRACT}}\";var rx = new RegExp('sitekey=\"([^\"]+)\"','i'); var x = sitekey.match(rx)[1];  x;")
+SET datasitekey2 EVAL("'{{!EXTRACT}}'.match(/anchor\?k=(.+?)&/)[1];")
+SET datasitekey EVAL("if(\"{{datasitekey1}}\".length > 15){s = \"{{datasitekey1}}\"}else{s = \"{{datasitekey2}}\"};s;")
+SET !ERRORIGNORE NO
+
+' Or set your sitekey
+'SET datasitekey 6Le-wvkSAAAAAPBMRTvw0Q4Muexq9bi0DJwx_mJ-
+
+'Syntaxcheck: API Key, prio
+SET apikey EVAL("var s=\"{{apikey}}\"; if(s.match(/^[a-zA-Z0-9]+$/) && s.length <= 50 && s.length >= 5) s; else MacroError(\"API Key is wrong.\")")
+SET prio EVAL("var s=\"{{prio}}\", d = parseFloat(s); if(d >= 0 && d <= 20) d; else MacroError(\"Value(Prio) is not in the set range.\")")
+SET pageurl EVAL("domain = \"{{!URLCURRENT}}\".split(\"://\")[1];domain.split(\"/\")[0];")
+
+'Step 3: Open the a new tab, and go to 9kw.eu, and submit the captcha picture
+TAB OPEN
+TAB T=2
+URL GOTO=http://www.9kw.eu/grafik/form_base64.html
+'The apikey is used to identify each of our customers, which you can get from the our page. It is assigned to the CONTENT.
+TAG POS=1 TYPE=INPUT ATTR=NAME:apikey CONTENT={{apikey}}
+'Priority in our system like min. 0 to max. 20 (cost +0-20)
+TAG POS=1 TYPE=INPUT ATTR=NAME:prio CONTENT={{prio}}
+'Options for the form. See more under http://www.9kw.eu/grafik/form_base64.html and http://www.9kw.eu/api.html
+TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ACTION:/index.cgi ATTR=NAME:selfsolve CONTENT=NO
+TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ACTION:/index.cgi ATTR=NAME:confirm CONTENT=NO
+TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ACTION:/index.cgi ATTR=NAME:base64 CONTENT=NO
+TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ACTION:/index.cgi ATTR=NAME:interactive CONTENT=YES
+TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ACTION:/index.cgi ATTR=NAME:case-sensitive CONTENT=NO
+TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ACTION:/index.cgi ATTR=NAME:nomd5 CONTENT=YES
+TAG POS=1 TYPE=INPUT ATTR=NAME:maxtimeout CONTENT=3999
+TAG POS=1 TYPE=INPUT ATTR=NAME:source CONTENT=imacros
+TAG POS=1 TYPE=INPUT ATTR=NAME:oldsource CONTENT=recaptchav2
+TAG POS=1 TYPE=INPUT ATTR=NAME:pageurl CONTENT={{pageurl}}
+TAG POS=1 TYPE=INPUT ATTR=NAME:file-upload-01 CONTENT={{datasitekey}}
+'Submit the formdata to 9kw.eu
+TAG POS=1 TYPE=INPUT ATTR=TYPE:submit
+'Extract the captchaid from your captcha submit
+TAG POS=1 TYPE=INPUT ATTR=NAME:captchaid EXTRACT=TXT
+SET captchaid {{!EXTRACT}}
+'Clean the !EXTRACT variable for the next task
+SET !EXTRACT NULL
+'Extract the characters that are recoginzed from the picture of captcha.
+TAG POS=1 TYPE=INPUT ATTR=NAME:result EXTRACT=TXT
+'Step 4: Check the captcha answer (text or nothing like #EANF# = Extraction Anchor Not Found)
+SET answer EVAL("if (\"{{!EXTRACT}}\" == \"#EANF#\") {var x = \"\";} else {var x = \"{{!EXTRACT}}\";} x;")
+'Clean the !EXTRACT variable for the next task
+SET !EXTRACT NULL
+TAB CLOSE
+
+'Display extracted data (only for debug)
+'PROMPT {{captchaid}}
+
+'Step 5: Fill the recognized characters to the verification box
+TAB T=1
+'js callback (function "onSuccess" in the htmlcode under "data-callback") with g-recaptcha-response field
+URL GOTO=javascript:(function(){document.getElementById("g-recaptcha-response").innerHTML="{{answer}}";onSuccess();})();
+
+'js callback with answer (function "recaptchaSolved" in the htmlcode under "data-callback")
+'URL GOTO=javascript:(function(){recaptchaSolved("{{answer}}");})();
+
+'With ba.l.callback (js callback without definition in the code)
+'URL GOTO=javascript:(function(){___grecaptcha_cfg.clients[0].ba.l.callback("{{answer}}");})();
+
+'Click the Verify button
+WAIT SECONDS=1

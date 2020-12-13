@@ -1,0 +1,10 @@
+﻿VERSION BUILD=8970419 RECORDER=FX
+TAB T=1
+URL GOTO=about:newtab
+URL GOTO=moz-action:visiturl,{"url":"http%3A%2F%2Fp-store.net%2F","input":"p-store.net"}
+EVENT TYPE=CLICK SELECTOR="#search_form>INPUT" BUTTON=0
+EVENTS TYPE=KEYPRESS SELECTOR="#search_form>INPUT" CHARS="ADREACYOR"
+EVENTS TYPE=KEYPRESS SELECTOR="#search_form>INPUT" KEYS="[8,8,8]"
+EVENTS TYPE=KEYPRESS SELECTOR="#search_form>INPUT" CHARS="TOR"
+EVENT TYPE=CLICK SELECTOR="#search_form>INPUT:nth-of-type(3)" BUTTON=0
+EVENT TYPE=CLICK SELECTOR="HTML>BODY>DIV:nth-of-type(7)>DIV:nth-of-type(2)>DIV>DIV:nth-of-type(4)>DIV:nth-of-type(2)>DIV>DIV>P>A" BUTTON=0

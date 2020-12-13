@@ -1,0 +1,19 @@
+'Maybe change the name and path and make sure you have the rights on the folder to read/write
+FILEDELETE NAME=c:\captcha.jpg
+ONDOWNLOAD FOLDER=c:\ FILE=captcha.jpg
+
+'The actual URL with the captcha to download. Change the bold part to the one you need
+TAG POS=1 TYPE=IMG ATTR=ID:captcha-img CONTENT=EVENT:SAVEITEM
+TAB OPEN
+TAB T=2
+
+'In case you have Captcha Breaker running on another IP or Port, change the bold part
+URL GOTO=http://127.0.0.1:80/gsa_test.gsa
+TAG POS=1 TYPE=INPUT:FILE FORM=ACTION:/gsa_test.gsa ATTR=NAME:file CONTENT=C:\captcha.jpg
+TAG POS=1 TYPE=INPUT:SUBMIT FORM=ACTION:/gsa_test.gsa ATTR=VALUE:Submit
+TAG POS=1 TYPE=BODY ATTR=ID:captcha_result EXTRACT=TXT
+
+'Set variable VAR1 with a CAPTCHA text. Change the bold parts to locate the field to put the captcha result in
+SET !VAR1 {{!EXTRACT}}
+TAB T=1
+TAG POS=1 TYPE=INPUT:TEXT FORM=NAME:Registform ATTR=ID:captcha CONTENT={{!VAR1}}

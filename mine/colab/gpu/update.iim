@@ -1,0 +1,42 @@
+VERSION BUILD=8970419 RECORDER=FX
+SET !DATASOURCE users.csv
+SET !DATASOURCE_COLUMNS 4
+SET !DATASOURCE_LINE {{loop}}
+SET !ERRORIGNORE YES
+
+TAB T=1
+CLEAR
+
+FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu\login_cap.iim
+FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu\login_del_new.iim
+FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu\login_del.iim
+FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu\login_new.iim
+FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu\login.iim
+FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu\logout.iim
+FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu\logout_f.iim
+FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu\source.iim
+FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu\traffic.iim
+FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu\mine.js
+
+URL GOTO=http://s.dnyns.com/mine/colab/gpu/login_cap.iim
+SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=login_cap.iim
+URL GOTO=http://s.dnyns.com/mine/colab/gpu/login_del_new.iim
+SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=login_del_new.iim
+URL GOTO=http://s.dnyns.com/mine/colab/gpu/login_del.iim
+SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=login_del.iim
+URL GOTO=http://s.dnyns.com/mine/colab/gpu/login_new.iim
+SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=login_new.iim
+URL GOTO=http://s.dnyns.com/mine/colab/gpu/login.iim
+SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=login.iim
+URL GOTO=http://s.dnyns.com/mine/colab/gpu/logout.iim
+SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=logout.iim
+URL GOTO=http://s.dnyns.com/mine/colab/gpu/logout_f.iim
+SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=logout_f.iim
+URL GOTO=http://s.dnyns.com/mine/colab/gpu/source.iim
+SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=source.iim
+URL GOTO=http://s.dnyns.com/mine/colab/gpu/traffic.iim
+SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=traffic.iim
+URL GOTO=http://s.dnyns.com/mine/colab/gpu/mine.js
+SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=mine.js
+
+CLEAR
