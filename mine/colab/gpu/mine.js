@@ -24,7 +24,7 @@ var error14 = /NS_ERROR_FILE_NOT_FOUND: Component returned failure code/g;
         
         //NORMAL FORM BARU
         iimSet("loop",i);
-        // iimPlay("colab/gpu/update");
+        iimPlay("colab/gpu/update");
         iimSet("loop",i);
         var run = iimGetErrorText(iimPlay("colab/gpu/login_new"));
 

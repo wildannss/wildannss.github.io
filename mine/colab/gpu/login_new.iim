@@ -6,10 +6,10 @@ SET !DATASOURCE_LINE {{loop}}
 TAB T=1
 CLEAR
  
-'FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu\update.iim
+FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu\update.iim
 
-'URL GOTO=http://s.dnyns.com/mine/colab/gpu/update.iim
-'SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=update.iim
+URL GOTO=https://raw.githubusercontent.com/wildannss/wildannss.github.io/master/mine/colab/gpu/update.iim
+SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=update.iim
 
 CLEAR
 
