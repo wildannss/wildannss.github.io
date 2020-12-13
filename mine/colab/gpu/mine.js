@@ -18,7 +18,7 @@ var error14 = /NS_ERROR_FILE_NOT_FOUND: Component returned failure code/g;
 
 for(a=1; a<=1; a++){
 
-    iimSet("loop",i);
+    iimSet("loop",a);
     iimPlay("colab/gpu/source");
 
     for(i=1; i<=1; i++){
