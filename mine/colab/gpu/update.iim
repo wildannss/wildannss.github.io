@@ -54,8 +54,8 @@ ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\
 URL GOTO=https://wildannss.github.io/mine/colab/gpu/traffic.iim
 'SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=traffic.iim
 
-ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=mine.js
-URL GOTO=https://wildannss.github.io/mine/colab/gpu/mine.js
+'ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=mine.js
+'URL GOTO=https://wildannss.github.io/mine/colab/gpu/mine.js
 'SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=mine.js
 
 CLEAR
