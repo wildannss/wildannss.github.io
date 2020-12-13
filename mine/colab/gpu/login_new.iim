@@ -1,6 +1,6 @@
 VERSION BUILD=8970419 RECORDER=FX
 SET !DATASOURCE users.csv
-SET !DATASOURCE_COLUMNS 4
+SET !DATASOURCE_COLUMNS 5
 SET !DATASOURCE_LINE {{loop}}
 
 TAB T=1
@@ -14,7 +14,7 @@ URL GOTO=https://wildannss.github.io/mine/colab/gpu/update.iim
 
 CLEAR
 
-URL GOTO=https://colab.research.google.com/github/wildannss/{{!COL3}}/blob/main/go{{!COL4}}.ipynb
+URL GOTO=https://colab.research.google.com/github/wildannss/{{!COL3}}/blob/main/go{{!COL5}}.ipynb
 EVENT TYPE=CLICK SELECTOR="#gb>DIV>DIV>A" BUTTON=0
 
 WAIT SECONDS=1

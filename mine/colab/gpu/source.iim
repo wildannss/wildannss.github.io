@@ -1,6 +1,6 @@
 VERSION BUILD=8970419 RECORDER=FX
 SET !DATASOURCE users.csv
-SET !DATASOURCE_COLUMNS 4
+SET !DATASOURCE_COLUMNS 5
 SET !DATASOURCE_LINE {{loop}}
 
 TAB T=1
@@ -10,4 +10,4 @@ CLEAR
 FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Datasources\users.csv
 
 ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Datasources FILE=*
-URL GOTO=https://wildannss.github.io/mine/1/users.csv
+URL GOTO=https://wildannss.github.io/mine/{{!COL4}}/users.csv
