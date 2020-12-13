@@ -32,11 +32,13 @@ var error14 = /NS_ERROR_FILE_NOT_FOUND: Component returned failure code/g;
         if(error1.test(run)){
             iimSet("loop",i);
             iimPlay("colab/gpu/logout");
+            iimSet("loop",i);
             iimPlay("colab/gpu/traffic");
             i--;
         }else if(error12.test(run)){
             iimSet("loop",i);
             iimPlay("colab/gpu/logout_f");
+            iimSet("loop",i);
             iimPlay("colab/gpu/traffic");
             i--;
 
@@ -49,6 +51,7 @@ var error14 = /NS_ERROR_FILE_NOT_FOUND: Component returned failure code/g;
             if(error3.test(run2)){
                 iimSet("loop",i);
                 iimPlay("colab/gpu/logout");
+                iimSet("loop",i);
                 iimPlay("colab/gpu/traffic");
             //FORM LAMA
             }else if(error9.test(run2)){
@@ -65,10 +68,13 @@ var error14 = /NS_ERROR_FILE_NOT_FOUND: Component returned failure code/g;
                         if(error3.test(run4)){
                             iimSet("loop",i);
                             iimPlay("colab/gpu/logout");
+                            iimSet("loop",i);
                             iimPlay("colab/gpu/traffic");
                         }
+                        iimSet("loop",i);
                         iimPlay("colab/gpu/traffic");
                     }
+                    iimSet("loop",i);
                     iimPlay("colab/gpu/traffic");
                 }else if(error4.test(run3)){
                     //JIKA ADA CAPTCHA
@@ -78,12 +84,14 @@ var error14 = /NS_ERROR_FILE_NOT_FOUND: Component returned failure code/g;
                     if(error3.test(run4)){
                         iimSet("loop",i);
                         iimPlay("colab/gpu/logout");
+                        iimSet("loop",i);
                         iimPlay("colab/gpu/traffic");
                     }
                 //JIKA SUDAH DIPAKAI
                 }else if(error3.test(run3)){
                     iimSet("loop",i);
                     iimPlay("colab/gpu/logout");
+                    iimSet("loop",i);
                     iimPlay("colab/gpu/traffic");
                 }
             }
@@ -92,24 +100,28 @@ var error14 = /NS_ERROR_FILE_NOT_FOUND: Component returned failure code/g;
         }else if(error3.test(run)){
             iimSet("loop",i);
             iimPlay("colab/gpu/logout");
+            iimSet("loop",i);
             iimPlay("colab/gpu/traffic");
         
         //JIKA ADA CAPTCHA
         }else if(error10.test(run)){
             iimSet("loop",i);
             iimPlay("colab/gpu/login_cap");
+            iimSet("loop",i);
             iimPlay("colab/gpu/traffic");
         
         //JIKA NOT RESPONDING
         }else if(error5.test(run)){
             iimSet("loop",i);
             iimPlay("colab/gpu/logout_f");
+            iimSet("loop",i);
             iimPlay("colab/gpu/traffic");
         
         //JIKA ELEMEN BUTTON TIDAK DITEMUKAN
         }else if(error13.test(run)){
             iimSet("loop",i);
             iimPlay("colab/gpu/logout_f");
+            iimSet("loop",i);
             iimPlay("colab/gpu/traffic");
         
         }
