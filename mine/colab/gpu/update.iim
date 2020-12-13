@@ -16,7 +16,7 @@ FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iM
 FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu\logout_f.iim
 FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu\source.iim
 FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu\traffic.iim
-FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu\mine.js
+'FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu\mine.js
 
 ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=login_cap.iim
 URL GOTO=https://wildannss.github.io/mine/colab/gpu/login_cap.iim

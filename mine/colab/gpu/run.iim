@@ -1,0 +1,6 @@
+VERSION BUILD=8970419 RECORDER=FX
+
+TAB T=1
+CLEAR
+
+URL GOTO=imacros://run/?m=your-javascript.js
