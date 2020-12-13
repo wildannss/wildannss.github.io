@@ -16,9 +16,9 @@ var error13  = /RuntimeError: Element A is not visible/g;
 //error14 NOT USED
 var error14 = /NS_ERROR_FILE_NOT_FOUND: Component returned failure code/g;
 
-// for(a=1; a<=30; a++){
+for(a=1; a<=1; a++){
 
-    // iimPlay("colab/gpu/source");
+    iimPlay("colab/gpu/source");
 
     for(i=1; i<=1; i++){
         
@@ -127,4 +127,4 @@ var error14 = /NS_ERROR_FILE_NOT_FOUND: Component returned failure code/g;
         }
     }
 
-// }
+}
