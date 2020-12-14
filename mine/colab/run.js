@@ -19,87 +19,87 @@ var error14 = /NS_ERROR_FILE_NOT_FOUND: Component returned failure code/g;
 for(a=1; a<=30; a++){
 
     iimSet("loop",a);
-    iimPlay("colab/gpu/source");
+    iimPlay("colab/source");
 
     for(i=1; i<=100; i++){
         
         //NORMAL FORM BARU
         iimSet("loop",i);
-        iimPlay("colab/gpu/update");
+        iimPlay("colab/update");
         iimSet("loop",i);
-        var run = iimGetErrorText(iimPlay("colab/gpu/login_new"));
+        var run = iimGetErrorText(iimPlay("colab/login_new"));
 
         //JIKA BELUM LOGOUT
         if(error1.test(run)){
             iimSet("loop",i);
-            iimPlay("colab/gpu/logout");
+            iimPlay("colab/logout");
             i--;
         }else if(error12.test(run)){
             iimSet("loop",i);
-            iimPlay("colab/gpu/logout_f");
+            iimPlay("colab/logout_f");
             i--;
 
         //JIKA TIDAK ADA EMAIL DI FORM BARU
         }else if(error7.test(run)){
             //FORM BARU DEL USER
             iimSet("loop",i);
-            var run2 = iimGetErrorText(iimPlay("colab/gpu/login_del_new"));
+            var run2 = iimGetErrorText(iimPlay("colab/login_del_new"));
             //JIKA SUDAH DIPAKAI
             if(error3.test(run2)){
                 iimSet("loop",i);
-                iimPlay("colab/gpu/logout");
+                iimPlay("colab/logout");
             //FORM LAMA
             }else if(error9.test(run2)){
                 iimSet("loop",i);
-                var run3 = iimGetErrorText(iimPlay("colab/gpu/login_del"));
+                var run3 = iimGetErrorText(iimPlay("colab/login_del"));
                 if(error6.test(run3)){
                     iimSet("loop",i);
-                    var run4 = iimGetErrorText(iimPlay("colab/gpu/login"));
+                    var run4 = iimGetErrorText(iimPlay("colab/login"));
                     //JIKA ADA CAPTCHA
                     if(error4.test(run4)){
                         iimSet("loop",i);
-                        var run4 = iimGetErrorText(iimPlay("colab/gpu/login_cap"));
+                        var run4 = iimGetErrorText(iimPlay("colab/login_cap"));
                         //JIKA SUDAH DIPAKAI
                         if(error3.test(run4)){
                             iimSet("loop",i);
-                            iimPlay("colab/gpu/logout");
+                            iimPlay("colab/logout");
                         }
                     }
                 }else if(error4.test(run3)){
                     //JIKA ADA CAPTCHA
                     iimSet("loop",i);
-                    var run4 = iimGetErrorText(iimPlay("colab/gpu/login_cap"));
+                    var run4 = iimGetErrorText(iimPlay("colab/login_cap"));
                     //JIKA SUDAH DIPAKAI
                     if(error3.test(run4)){
                         iimSet("loop",i);
-                        iimPlay("colab/gpu/logout");
+                        iimPlay("colab/logout");
                     }
                 //JIKA SUDAH DIPAKAI
                 }else if(error3.test(run3)){
                     iimSet("loop",i);
-                    iimPlay("colab/gpu/logout");
+                    iimPlay("colab/logout");
                 }
             }
 
         //JIKA SUDAH DIPAKAI
         }else if(error3.test(run)){
             iimSet("loop",i);
-            iimPlay("colab/gpu/logout");
+            iimPlay("colab/logout");
         
         //JIKA ADA CAPTCHA
         }else if(error10.test(run)){
             iimSet("loop",i);
-            iimPlay("colab/gpu/login_cap");
+            iimPlay("colab/login_cap");
         
         //JIKA NOT RESPONDING
         }else if(error5.test(run)){
             iimSet("loop",i);
-            iimPlay("colab/gpu/logout_f");
+            iimPlay("colab/logout_f");
         
         //JIKA ELEMEN BUTTON TIDAK DITEMUKAN
         }else if(error13.test(run)){
             iimSet("loop",i);
-            iimPlay("colab/gpu/logout_f");
+            iimPlay("colab/logout_f");
         
         }
     }

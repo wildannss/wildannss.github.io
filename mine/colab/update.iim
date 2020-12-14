@@ -6,66 +6,66 @@ SET !DATASOURCE_LINE {{loop}}
 TAB T=1
 CLEAR
  
-FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu\login_cap.iim
+FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\login_cap.iim
 WAIT SECONDS=1
-FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu\login_del_new.iim
+FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\login_del_new.iim
 WAIT SECONDS=1
-FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu\login_del.iim
+FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\login_del.iim
 WAIT SECONDS=1
-FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu\login_new.iim
+FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\login_new.iim
 WAIT SECONDS=1
-FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu\login.iim
+FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\login.iim
 WAIT SECONDS=1
 WAIT SECONDS=1
-FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu\logout.iim
+FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\logout.iim
 WAIT SECONDS=1
-FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu\logout_f.iim
+FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\logout_f.iim
 WAIT SECONDS=1
-FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu\source.iim
-'FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu\mine.js
+FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\source.iim
+'FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\mine.js
 
 WAIT SECONDS=1
 ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=login_cap.iim
-URL GOTO=https://wildannss.github.io/mine/colab/gpu/login_cap.iim
+URL GOTO=https://wildannss.github.io/mine/colab/login_cap.iim
 'SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=login_cap.iim
 
 WAIT SECONDS=1
 ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=login_del_new.iim
-URL GOTO=https://wildannss.github.io/mine/colab/gpu/login_del_new.iim
+URL GOTO=https://wildannss.github.io/mine/colab/login_del_new.iim
 'SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=login_del_new.iim
 
 WAIT SECONDS=1
 ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=login_del.iim
-URL GOTO=https://wildannss.github.io/mine/colab/gpu/login_del.iim
+URL GOTO=https://wildannss.github.io/mine/colab/login_del.iim
 'SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=login_del.iim
 
 WAIT SECONDS=1
 ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=login_new.iim
-URL GOTO=https://wildannss.github.io/mine/colab/gpu/login_new.iim
+URL GOTO=https://wildannss.github.io/mine/colab/login_new.iim
 'SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=login_new.iim
 
 WAIT SECONDS=1
 ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=login.iim
-URL GOTO=https://wildannss.github.io/mine/colab/gpu/login.iim
+URL GOTO=https://wildannss.github.io/mine/colab/login.iim
 'SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=login.iim
 
 WAIT SECONDS=1
 ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=logout.iim
-URL GOTO=https://wildannss.github.io/mine/colab/gpu/logout.iim
+URL GOTO=https://wildannss.github.io/mine/colab/logout.iim
 'SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=logout.iim
 
 WAIT SECONDS=1
 ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=logout_f.iim
-URL GOTO=https://wildannss.github.io/mine/colab/gpu/logout_f.iim
+URL GOTO=https://wildannss.github.io/mine/colab/logout_f.iim
 'SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=logout_f.iim
 
 WAIT SECONDS=1
 ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=source.iim
-URL GOTO=https://wildannss.github.io/mine/colab/gpu/source.iim
+URL GOTO=https://wildannss.github.io/mine/colab/source.iim
 'SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=source.iim
 
 'ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=mine.js
-'URL GOTO=https://wildannss.github.io/mine/colab/gpu/mine.js
+'URL GOTO=https://wildannss.github.io/mine/colab/mine.js
 'SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\gpu FILE=mine.js
 
 CLEAR
